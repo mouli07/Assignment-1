@@ -1,4 +1,4 @@
-
+/*Program to find the name of the country with highest area,population and population density*/
 public class Country {
 	
 	private String Cname[]=new String[100];
@@ -7,7 +7,7 @@ public class Country {
 	private int i,j,num;
 	private int populationdensity[]=new int[100];
 	
-	void setValue(int n,String cname[],int popula[],int ar[])
+	void setValue(int n,String cname[],int popula[],int ar[])     //Method to set Value
 	{
 		Cname=cname;
 		population=popula;
@@ -28,7 +28,7 @@ public class Country {
 		a=b;
 		b=temp;
 	}
-	void calculateLargestarea()
+	void calculateLargestarea()					//Method to find the country with the largest area
 	{
 		
 		for(i=0;i<num;i++)
@@ -48,7 +48,7 @@ public class Country {
 	}
 	
 	
-	void calculateLargestpopu()
+	void calculateLargestpopu()				//Method to find the country with the largest population
 	{
 		
 		for(i=0;i<num;i++)
@@ -67,7 +67,7 @@ public class Country {
 		System.out.println("The country with the largest population: " +Cname[0]);
 	}
 	
-	void calculatelargestdensity()
+	void calculatelargestdensity()					//Method to find the country with the largest population density
 	{
 		for(i=0;i<num;i++)
 		{

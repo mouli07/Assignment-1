@@ -1,3 +1,4 @@
+/*Program to find if a string is palindrome or not and if palindrome then sort the same*/
 import java.util.*;
 
 public class PalindromeSort {

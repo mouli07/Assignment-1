@@ -1,4 +1,4 @@
-
+/*Program to find the type of input triangle*/
 public class Triangle {
 	
 	private int side1,side2,side3;
@@ -10,7 +10,7 @@ public class Triangle {
 		side3=c;
 	}
 	
-	boolean isright()
+	boolean isright()				//Method to find a right angled triangle
 	{
 		if((side1*side1)==((side2*side2)+(side3*side3)))
 			return true;
@@ -23,7 +23,7 @@ public class Triangle {
 		
 	}
 	
-	boolean isScalene()
+	boolean isScalene()				//Method to find a scalene triangle
 	{
 		if(side1!=side2 && side2!=side3)
 		return true;
@@ -31,7 +31,7 @@ public class Triangle {
 			return false;
 	}
 	
-	boolean isIsoceles()
+	boolean isIsoceles()				//Method to find an isoceles triangle
 	{
 		if(side1==side2 && side1!=side3)
 			return true;
@@ -43,7 +43,7 @@ public class Triangle {
 			return false;
 	}
 	
-	boolean isEquilateral()
+	boolean isEquilateral()				//Method to find an equilateral triangle
 	{
 		if(side1==side2 && side2==side3)
 			return true;

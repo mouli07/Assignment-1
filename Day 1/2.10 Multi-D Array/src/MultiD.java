@@ -1,3 +1,5 @@
+/*Program to search for an element in a Multi dimentional array*/
+
 import java.util.*;
 
 public class MultiD {

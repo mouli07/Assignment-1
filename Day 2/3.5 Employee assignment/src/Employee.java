@@ -1,4 +1,4 @@
-
+/*Program to calculate employee salary*/
 public class Employee {
 	
 	private int Id;
@@ -11,24 +11,24 @@ public class Employee {
     private float Esic = 0.0F;
     private float tax;
     
-    void getIdname(int Id,String name)
+    void getIdname(int Id,String name)				//Method to get the name and the employee Id
     {
     	this.Id=Id;
     	this.name=name;
     }
     
-    void setmonthlyBasic(float mbasic)
+    void setmonthlyBasic(float mbasic)				//Method to get monthlyBasic
     {
     	monthlyBasic=mbasic;
     	
     }
     
-    float getAnnualBasic()
+    float getAnnualBasic()					//Method to get AnnualBasic
     {
     	return 12*monthlyBasic;
     }
     
-    float getMonthlyGrossSalary()
+    float getMonthlyGrossSalary()				//Method to calculate MonthlyGrossSalary
     {
     	hra= 0.5F * monthlyBasic;
     	
@@ -36,12 +36,12 @@ public class Employee {
     }
     
     
-    float getAnnualGrossSalary()
+    float getAnnualGrossSalary()				//Method to calculate Annual Gross Salary
     {
     	return 12*getMonthlyGrossSalary();
     }
     
-    float getMonthlyDeductions()
+    float getMonthlyDeductions()				//Method to calculate Monthly Deductions
     {
     	PF= 0.1F * monthlyBasic;
     	if(PF>6500F)
@@ -66,22 +66,22 @@ public class Employee {
     	return getPFRate()+Esic+tax;
     }
     
-    float getMonthlyTakeHome()
+    float getMonthlyTakeHome()						//Method to calculate monthly Take away amount
     {
     	return getMonthlyGrossSalary()-getMonthlyDeductions();
     }
     
-    float getAnnualTakeHome()
+    float getAnnualTakeHome()						//Method to calculate annual Take away 
     {
     	return 12*getMonthlyTakeHome();
     }
     
-    float getPFRate()
+    float getPFRate()							//Method to get Provident fund amount
     {
     	return PF;
     }
     
-    void setPFRate(float f)
+    void setPFRate(float f)						//Method to set PF rate
     {
     	f= 0.1F * monthlyBasic;
     	if(f>6500F)

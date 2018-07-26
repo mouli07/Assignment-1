@@ -1,3 +1,4 @@
+/*Program to check a number is palindrome or not*/
 import java.util.Scanner;
 
 public class Palindrome {
@@ -8,10 +9,12 @@ public class Palindrome {
 		     String num;
 		     String rev="";
 		     int i;
+
 		     System.out.println("Enter the number:");
 		     @SuppressWarnings("resource")
 		     Scanner sc = new Scanner(System.in);
 		     num=sc.next();
+
 		          for(i=num.length() - 1;i>=0;i--)
 		          {
 		          rev=rev+num.charAt(i);   

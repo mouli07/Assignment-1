@@ -1,3 +1,4 @@
+/*Program to find the discount amount*/
 import java.util.*;
 
 public class Discount {

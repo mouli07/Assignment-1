@@ -1,8 +1,10 @@
+/*Program to search a name from an array*/
 import java.util.*;
 
 public class ArrayNames {
 
 	public static void main(String args[]) {
+
 		int n, i, count = 0;
 		String key;
 		@SuppressWarnings("resource")
@@ -10,6 +12,7 @@ public class ArrayNames {
 		System.out.println("Enter the number of elements:");
 		n = sc.nextInt();
 		String arr[] = new String[n];
+
 		for (i = 0; i < n; i++) {
 			arr[i] = sc.next();
 		}
