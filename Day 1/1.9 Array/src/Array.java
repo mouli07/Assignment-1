@@ -1,11 +1,16 @@
+/*Program to search a string within an array*/
 import java.util.*;
 
 public class Array {
+
 	public static void main(String args[]) {
+
 		int arr[] = new int[16];
 		int sr, i;
+
 		System.out.println("Enter the array:");
 		@SuppressWarnings("resource")
+
 		Scanner sc = new Scanner(System.in);
 		for (i = 0; i < 15; i++) {
 			arr[i] = sc.nextInt();

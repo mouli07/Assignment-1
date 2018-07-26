@@ -1,6 +1,10 @@
+/*Program to calculate the average and total marks of 3 students in 3 subjects*/
+
 import java.util.*;
 
 public class Marks11 {
+
+public static void main()
 	{
 		int total = 0, avg = 0, i, j;
 		int arr[][] = new int[3][3];

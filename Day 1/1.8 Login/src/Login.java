@@ -1,3 +1,5 @@
+/*Program to check the validity of login credentials*/
+
 import java.util.*;
 
 public class Login {

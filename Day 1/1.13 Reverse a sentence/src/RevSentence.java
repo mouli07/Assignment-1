@@ -1,3 +1,5 @@
+/*Program to reverse a sentence*/
+
 import java.util.*;
 
 public class RevSentence {

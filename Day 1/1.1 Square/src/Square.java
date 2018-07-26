@@ -1,3 +1,4 @@
+/*Program to calculate the square of a number*/
 import java.util.*;
 
 public class Square {
@@ -7,6 +8,7 @@ public class Square {
 	public static void main(String args[]) {
 		int num, sqr;
 		sc = new Scanner(System.in);
+
 		System.out.println("Enter the number :");
 		num = sc.nextInt();
 		sqr = calsqr(num);
@@ -14,6 +16,8 @@ public class Square {
 
 	}
 
+
+	//Method to calculate square
 	public static int calsqr(int num) {
 
 		return num * num;

@@ -1,3 +1,4 @@
+/*Program to find out the number is armstrong or not*/
 import java.util.*;
 
 public class Armstrong {

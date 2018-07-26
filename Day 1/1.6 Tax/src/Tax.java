@@ -1,8 +1,11 @@
+/*Program to calculate the income tax*/
 import java.util.*;
 
 public class Tax {
 
-	public static void main(String args[]) {
+	public static void main(String args[]) 
+		
+		{
 		double tax = 1, ctc;
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);

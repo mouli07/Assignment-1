@@ -1,6 +1,10 @@
+/*Program to find out the armstrong number within a range*/
 
 public class Armstrongrange {
+
 	public static void main(String args[]) {
+
+
 		int num, r, i, sum = 0;
 		for (i = 100; i <= 999; i++) {
 			num = i;

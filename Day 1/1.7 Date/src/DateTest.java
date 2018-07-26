@@ -1,3 +1,4 @@
+/*Test class for resolving the month to words*/
 import java.util.*;
 
 public class DateTest {
@@ -5,6 +6,7 @@ public class DateTest {
 	public static void main(String args[]) {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
+
 		System.out.println("Enter DD: ");
 		int date = sc.nextInt();
 
@@ -15,6 +17,7 @@ public class DateTest {
 
 		System.out.println("Enter MM: ");
 		int mon = sc.nextInt();
+
 		if (mon <= 0 && mon > 12) {
 			System.out.println("Invalid MM");
 			java.lang.System.exit(0);
