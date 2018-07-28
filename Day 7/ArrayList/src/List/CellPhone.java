@@ -1,3 +1,4 @@
+/*Definition of Cell Phone features*/
 package List;
 
 public class CellPhone {
@@ -6,13 +7,15 @@ public class CellPhone {
 	String model;
 	String description;
 	String OperatingSystem;
+	double Price;
 	
-	public CellPhone(String company,String model,String description,String OperatingSystem)
+	public CellPhone(String company,String model,String description,String OperatingSystem, double Price)		//Constructor
 	{
 		this.company=company;
 		this.model=model;
 		this.description=description;
 		this.OperatingSystem=OperatingSystem;
+		this.Price=Price;
 	}
 	
 	public String getCompany()
@@ -33,6 +36,11 @@ public class CellPhone {
 	public String getOperatingSystem()
 	{
 		return OperatingSystem;
+	}
+	
+	public double getPrice()
+	{
+		return Price;
 	}
 	
 }

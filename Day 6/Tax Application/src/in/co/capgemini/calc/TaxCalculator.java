@@ -1,17 +1,12 @@
+/*Description of tax calculation method*/
 package in.co.capgemini.calc;
 
 public class TaxCalculator {
 	
-//	String empName;
-//	Boolean isIndian;
-//	int empSal;
-//	
 	public double calculateTax(String empName, Boolean isIndian, int empSal) throws Exception
 	{
 		float tax=0f;
-		//this.empName=empName;
-		//this.isIndian=isIndian;
-		//this.empSal=empSal;
+		//Try block
 		try {
 		if(empName.equals(null)|| empName.isEmpty())
 		{
@@ -48,7 +43,7 @@ public class TaxCalculator {
 		{
 			tax = (empSal *4)/100;
 		}
-		}catch(CountryNotValidException | EmployeeNameInvalidException |TaxNotEligibleException e)
+		}catch(CountryNotValidException | EmployeeNameInvalidException |TaxNotEligibleException e)  //Catch block
 		{
 			System.out.println(e.toString());
 		}

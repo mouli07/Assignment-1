@@ -1,3 +1,4 @@
+/*Junit test class for tax calculator*/
 package in.co.capgemini.test;
 
 
@@ -8,6 +9,8 @@ import in.co.capgemini.calc.TaxCalculator;
 
 public class TestTaxAmount {
 
+
+	//Method for isIndian False
 	@Test
 	public void testIsIndianFalse() throws Exception {
 		
@@ -16,6 +19,8 @@ public class TestTaxAmount {
 		Assert.assertEquals(0, ans, 0);
 		
 	}
+
+	//Method for tax not eligible
 	@Test
 	public void testTaxNotEligible() throws Exception {
 		
@@ -25,6 +30,7 @@ public class TestTaxAmount {
 		
 	}
 	
+	//Method for valid case
 	@Test
 	public void testValidCase() throws Exception {
 		
@@ -34,6 +40,7 @@ public class TestTaxAmount {
 		
 	}
 	
+	//Method for name is null or not valid
 	@Test
 	public void testNullName() throws Exception {
 		

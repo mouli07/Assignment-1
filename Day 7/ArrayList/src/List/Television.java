@@ -1,3 +1,4 @@
+/*Definition of Television features*/
 package List;
 
 public class Television {
@@ -5,9 +6,10 @@ public class Television {
 	String company;
 	String Type;
 	Boolean enable;
-	String price;
+	double price;
 	
-	public Television(String company, String type, Boolean enable, String price) {
+	public Television(String company, String type, Boolean enable, double price) 			//Constructor
+	{
 		this.company = company;
 		Type = type;
 		this.enable = enable;
@@ -29,7 +31,7 @@ public class Television {
 		return enable;
 	}
 	
-	public String getPrice()
+	public double getPrice()
 	{
 		return price;
 	}

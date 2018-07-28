@@ -1,3 +1,4 @@
+/*Definition of School features*/
 package List;
 
 public class School {
@@ -7,7 +8,7 @@ public class School {
 	String school_dist;
 	int greatSchoolRanking;
 	
-	public School(String name,String city,String school_dist,int greatSchoolRanking)
+	public School(String name,String city,String school_dist,int greatSchoolRanking)			//Construuctor
 	{
 		this.name=name;
 		this.city=city;
