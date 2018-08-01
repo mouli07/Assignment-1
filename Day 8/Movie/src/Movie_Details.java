@@ -1,38 +1,61 @@
-
+//to implement the movie entity
 public class Movie_Details {
-	
-	private String movie_name;
-	private String lead_actor;
-	private String lead_actress;
+
+	//instance member
+	private String movName;
+	private String leadActor;
+	private String leadActress;
 	private String genre;
 	
-	public Movie_Details(String movie_name, String lead_actor, String lead_actress, String genre) {
-		this.movie_name = movie_name;
-		this.lead_actor = lead_actor;
-		this.lead_actress = lead_actress;
-		this.genre = genre;
+	//getter and setter function
+	public String getMovName() {
+		return movName;
 	}
-
-	public String getMovie_name() {
-		return movie_name;
+	
+	public void setMovName(String movName) {
+		this.movName = movName;
 	}
-
-	public String getLead_actor() {
-		return lead_actor;
+	
+	public String getLeadActor() {
+		return leadActor;
 	}
-
-	public String getLead_actress() {
-		return lead_actress;
+	
+	public void setLeadActor(String leadActor) {
+		this.leadActor = leadActor;
 	}
-
+	
+	public String getLeadActress() {
+		return leadActress;
+	}
+	
+	public void setLeadActress(String leadActress) {
+		this.leadActress = leadActress;
+	}
+	
 	public String getGenre() {
 		return genre;
 	}
 	
-	
-	
-	
-	
-	
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
 
+	//non arg constructor
+	public Movie_Details(String movName, String leadActor, String leadActress, String genre) {
+		super();
+		this.movName = movName;
+		this.leadActor = leadActor;
+		this.leadActress = leadActress;
+		this.genre = genre;
+	}
+
+	//to display all details
+	@Override
+	public String toString() {
+		return "MovieDetails [movName=" + movName + ", leadActor=" + leadActor + ", leadActress=" + leadActress
+				+ ", genre=" + genre + "]";
+	}
+	
+	
+	
 }

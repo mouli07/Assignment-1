@@ -1,89 +1,97 @@
 
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.Iterator;
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Movie_DetailsList {
-	
-	Set<Movie_Details> listOfmovie=new TreeSet<Movie_Details>();
-	
-	public void list()
-	{
-		
-		
-		//adding elements to Movie_Details
 
-		listOfmovie.add(new Movie_Details("Me Before You","Sam Claflin","Emilia Clarke","Romance"));
-		listOfmovie.add(new Movie_Details("Gone Girl","Ben Afflek","Rosamund Pyke","Psychological Thriller"));
-		listOfmovie.add(new Movie_Details("Inception","Leonardo DiCaprio","Ellen Page","Science Fiction Thriller"));
-		
-		
-		System.out.println("The Movie Details are ");
-		listOfmovie.stream().forEach((moviedetails) -> System.out.println("Movie Name- " +moviedetails.getMovie_name() + "\nLead Actor- "
-				+moviedetails.getLead_actor() + "\nLead Actress- " +moviedetails.getLead_actress() + "\nGenre- " +moviedetails.getGenre() + "\n"));
-		
-		
-		
-		do
+	List<Movie_Details> movieList = new ArrayList<>();
+	
+	//function to add movie
+	public void addMovie(Movie_Details mvd)
+	{
+		movieList.add(mvd);
+		System.out.println("After Adding :: ");
+		movieList.stream().forEach((movieList) -> System.out.println(movieList));
+	}
+	
+	//function to remove movie
+	public void remMovie(Movie_Details mvd)
+	{
+		movieList.remove(mvd);
+		System.out.println("After Removing :: ");
+		movieList.stream().forEach((movieList) -> System.out.println(movieList));
+	}
+	
+	//function to remove the whole list
+	public void remAllMovie()
+	{
+		movieList.removeAll(movieList);
+		System.out.println("After Removing All :: ");
+		movieList.stream().forEach((movieList) -> System.out.println(movieList));
+	}
+	
+	//function to find movie by name
+	public Movie_Details findByMovieName(String mvd)
+	{
+		for (Movie_Details movie : movieList)
 		{
-			System.out.println("1.Add Movie \n2.Remove Movie \n3.Remove All Movies "
-					+ "\n4.Find Movie By Name \n5.Find Movie By Genre 6.Exit\nEnter Your Choice: ");
-			
-			Scanner sc=new Scanner(System.in);
-			int num=sc.nextInt();
-			switch(num)
-			{
-			case 1:
-				System.out.println("Enter movie details:");
-				String name=sc.nextLine();
-				String actor=sc.nextLine();
-				String actress=sc.nextLine();
-				String genre=sc.nextLine();
-				add_movie(name,actor,actress,genre);
-				break;
-			
-			case 2:
-				remove_movie(listOfmovie);
-				break;
-				
-			case 3:
-				
+			if (movie.getMovName().equals(mvd))
+			{ 
+				return movie;
 			}
-			
-		}while(true);
-		
-
+		}
+		return null;
 	}
-	void add_movie(String movie_name, String lead_actor, String lead_actress, String genre)
+	
+	//function to find movie by genre
+	public Movie_Details findByMovieGenre(String movieGenre) 
 	{
-		listOfmovie.add(new Movie_Details(movie_name,lead_actor,lead_actress,genre));
+		for (Movie_Details movie : movieList) 
+		{
+			if (movie.getGenre().equals(movieGenre))
+			{ 
+				// if Movie Genre Equal to passes movie Genre then return object of that movie
+				return movie;
+			}
+		}
+		
+		return null;
 	}
 	
-	void remove_movie(String movie_name)
+	//function to call the desired sort class
+	public void sortin(String parameter)
 	{
-		listOfmovie.remove(movie_name);
-		System.out.println("After removing Movie:");
-		listOfmovie.stream().forEach((moviedetails) -> System.out.println("Movie Name- " +moviedetails.getMovie_name() + "\nLead Actor- "
-				+moviedetails.getLead_actor() + "\nLead Actress- " +moviedetails.getLead_actress() + "\nGenre- " +moviedetails.getGenre() + "\n"));
 		
-		
+		if (parameter.equals("Movie Name"))
+		{ 
+			// if Passed parameter is equal to Movie_Name
+			Collections.sort(movieList, new SortingByName());// Call sort method of Collections with arrayList and
+			// object of Required class which implements
+			// Comparator
+			movieList.stream().forEach((movie) -> System.out.println(movie));
+		}
+		else if (parameter.equals("Lead Actor")) 
+		{ 
+			// if Passed parameter is equal to Lead Actor
+			Collections.sort(movieList, new SortByLeadActor()); // Call sort method of Collections with arrayList and
+			// object of Required class which implements
+			// Comparator
+			movieList.stream().forEach((movie) -> System.out.println(movie));
+		}
+		else if (parameter.equals("Lead Actress")) 
+		{
+			Collections.sort(movieList, new SortByLeadActress());
+			movieList.stream().forEach((movie) -> System.out.println(movie));
+		}
+		else if (parameter.equals("Genre")) 
+		{
+			Collections.sort(movieList, new SortByGenre());
+			movieList.stream().forEach((movie) -> System.out.println(movie));
+		} 
+		else
+		{
+			System.out.println("Invalid Parameter Entered");
+		}
 	}
-	
-	void remove_all()
-	{
-		listOfmovie.removeAll(listOfmovie);
-		System.out.println("List is empty");
-	}
-	
-	
-	
-			
-			
-		
-		
 }
-	
-
-	
-
