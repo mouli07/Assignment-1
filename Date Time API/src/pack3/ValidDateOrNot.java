@@ -32,8 +32,8 @@ public class ValidDateOrNot {
 	
 	//using calendar class to add no of days to date
 	System.out.println("Enter the no of days to add");
-	Calendar c=Calendar.getInstance();//gets a calander instance
-	c.setTime(date);//sets the static variable in the calandar class
+	Calendar c=Calendar.getInstance();//gets a calendar instance
+	c.setTime(date);//sets the static variable in the calendar class
 	c.add(Calendar.DATE,Integer.parseInt(br.readLine()));//adds the date with some integers
 	System.out.println(sdf.format(c.getTime()));
 	}
