@@ -1,8 +1,6 @@
 package com.moneymoney.framework.account.pojo;
 
 /**
- * 
- * @author Satyen Singh
  *
  *Maintaining savings account details of money money bank
  */

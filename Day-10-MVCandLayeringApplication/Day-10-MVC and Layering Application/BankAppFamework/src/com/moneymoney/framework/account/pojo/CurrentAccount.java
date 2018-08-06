@@ -3,7 +3,6 @@ package com.moneymoney.framework.account.pojo;
 
 /**
  * 
- * @author Satyen Singh
  *
  *Maintining current account details of all the holders
  */

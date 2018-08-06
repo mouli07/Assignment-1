@@ -1,7 +1,6 @@
 package com.moneymoney.framework.account.pojo;
 
 /**
- * @author Satyen Singh
  *
  *This is an address class to maintain the address of the customer.
  */

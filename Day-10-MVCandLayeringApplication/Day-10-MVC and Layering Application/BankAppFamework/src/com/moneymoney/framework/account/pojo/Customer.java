@@ -4,7 +4,6 @@ import java.time.LocalDate;
 
 /**
  * 
- * @author Satyen Singh
  *
  *Maintaining customer details of money money bank
  */
