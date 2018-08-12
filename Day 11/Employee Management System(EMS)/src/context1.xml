@@ -6,7 +6,9 @@
 <bean id="data" class="dataLayer.DataLayer">
 </bean>
 <bean id="service" class="serviceLayer.ServiceLayer">
+<property name="dao" ref="data"></property>
 </bean>
 <bean id="controller" class="controller.Controller">
+<property name="Serv" ref="service"></property>
 </bean>
 </beans>
