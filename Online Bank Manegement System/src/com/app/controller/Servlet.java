@@ -1,16 +1,18 @@
 package com.app.controller;
 
 import java.io.IOException;
+import com.app.service.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Servlet
  */
-@WebServlet("/Servlet")
+@WebServlet("*.app")
 public class Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -27,6 +29,21 @@ public class Servlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		MMBankService mmservice = new MMBankService();
+		HttpSession session = request.getSession();
+		String action = request.getServletPath();
+		
+		switch(action)
+		{
+		case "/viewAll.app" :
+			session = request.getSession();
+			session.setAttribute("BankAccounts",mmservice.viewAll());
+			response.sendRedirect("viewallaccount.jsp");
+			break;
+			
+		case "/viewAllCustomers.app" :
+			
+		}
 	}
 
 	/**

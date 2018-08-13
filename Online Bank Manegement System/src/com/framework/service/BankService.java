@@ -7,9 +7,9 @@ import com.framework.pojo.Customer;
 
 public interface BankService {
 	
-	Set<BankAccount> viewAll();
+	Collection<BankAccount> viewAll();
 	
-	Set<Customer> viewAllCutomers();
+	Collection<Customer> viewAllCutomers();
 	
 	BankAccount searchAccount(int accNum);
 	

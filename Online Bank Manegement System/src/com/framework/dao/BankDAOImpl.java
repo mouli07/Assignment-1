@@ -35,9 +35,10 @@ public class BankDAOImpl implements BankDAO {
 		
 	}
 	@Override
-	public Set<BankAccount> viewAll(){
-		return bankAccountSet;
+	public Collection<BankAccount> viewAll(){
+		return bankAccountSet.values();
 	}
+	
 	public BankAccount searchAccount(int accNum)
 	{
 		for(BankAccount bank : viewAll())
@@ -50,7 +51,7 @@ public class BankDAOImpl implements BankDAO {
 		return null;
 	}
 	
-	public Set<Customer> viewAllCutomers(){
+	public Collection<Customer> viewAllCutomers(){
 		return customerSet;
 	}
 	

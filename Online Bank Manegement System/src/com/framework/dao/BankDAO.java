@@ -6,16 +6,18 @@ import com.framework.pojo.Customer;
 
 public interface BankDAO {
 	
+	Collection<BankAccount> viewAll();
 	
-		/**
-		 * @return Set of Accounts
-		 * 
-		 * This method is responsible for returning all the active accounts
-		 */
-		Set<BankAccount> viewAll();
-		
-		Set<Customer> viewAllCutomers();
-		
-		BankAccount searchAccount(int accNum);
+	Collection<Customer> viewAllCutomers();
+	
+	BankAccount searchAccount(int accNum);
+	
+	public int withdraw(int accNo,double amount);
+	
+	public int deposit(int accNo,double amount);
+	
+	public int fundTransfer(int accNoSender,int accNoReciever,double amount);
+	
+	public BankAccount getAccountById(int id);
 
 }

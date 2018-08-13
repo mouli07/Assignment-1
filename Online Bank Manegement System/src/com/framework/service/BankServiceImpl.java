@@ -11,13 +11,13 @@ public class BankServiceImpl implements BankService{
 	BankDAOImpl dao=new BankDAOImpl();
 
 	@Override
-	public Set<BankAccount> viewAll() {
+	public Collection<BankAccount> viewAll() {
 		// TODO Auto-generated method stub
 		return dao.viewAll();
 	}
 
 	@Override
-	public Set<Customer> viewAllCutomers() {
+	public Collection<Customer> viewAllCutomers() {
 		// TODO Auto-generated method stub
 		return dao.viewAllCutomers();
 	}
