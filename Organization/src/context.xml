@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+
+	<bean id="address" class="com.orga.provider.Address" >
+	<constructor-arg type="String" index="0" value="ABC Road"/>
+	<constructor-arg type="String" index="1" value="1/2 Lane"/>
+	<constructor-arg type="String" index="2" value="Kolkata"/>
+	<constructor-arg type="String" index="3" value="West Bengal"/>
+	<constructor-arg type="int" index="4" value="700001"/>
+	<constructor-arg type="String" index="5" value="India"/>
+	</bean>
+	
+	<util:set id="globalPresence">
+	<value>Kolkata</value>
+	<value>Mumbai</value>
+	<value>Bangalore</value>
+	<value>Pune</value>
+	</util:set>
+	
+	<util:list id="boardMembers">
+	<value>Tom</value>
+	<value>Sam</value>
+	<value>Vicky</value>
+	<value>Tony</value>
+	</util:list>
+	
+	<util:map id="projectManager">
+	<entry key="Java Cloud" value="Tom"></entry>
+	<entry key="V and V Automation" value="Sam"></entry>
+	<entry key="SAP" value="Vicky"></entry>
+	<entry key=".net" value="Tony"></entry>
+	</util:map>
+	
+	<bean id="orga" class="com.orga.provider.Organization" p:address-ref="address">
+	<constructor-arg type="String" index="0" value="Capgemini"/>
+	<constructor-arg type="com.orga.provider.Address" index="1" name="address" ref="address"/>
+	<constructor-arg type="double" index="2" value="10000"/>
+	<constructor-arg type="String" index="3" value="03/04/1958"/>
+	<constructor-arg type="int" index="4" value="200000"/>
+	<constructor-arg type="java.util.Set" index="5" ref="globalPresence"/>
+	<constructor-arg type="java.util.List" index="6" ref="boardMembers"/>
+	<constructor-arg type="java.util.Map" index="7" ref="projectManager"/>
+	</bean>
+	
+	
+</beans>
