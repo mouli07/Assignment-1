@@ -1,9 +1,12 @@
 package com.orga.provider;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Organization {
 	
@@ -12,9 +15,9 @@ public class Organization {
 	double marketVal;
 	String established;
 	int empCount;
-	Set<String> globalPresence;
-	List<String> boardMember;
-	Map<String,String> projectManager;
+	Set<String> globalPresence=new TreeSet<>();
+	List<String> boardMember=new ArrayList<>();
+	Map<String,String> projectManager=new HashMap<>();
 	
 	
 	public String getName() {
@@ -78,13 +81,14 @@ public class Organization {
 		this.boardMember = boardMember;
 		this.projectManager = projectManager;
 	}
-	
 	@Override
 	public String toString() {
-		return "Organization [name=" + name + ", marketVal=" + marketVal + ", established=" + established
-				+ ", empCount=" + empCount + ", globalPresence=" + globalPresence + ", boardMember=" + boardMember
-				+ ", projectManeger=" + projectManager + "]";
+		return "Organization [name=" + name + ", address=" + address + ", marketVal=" + marketVal + ", established="
+				+ established + ", empCount=" + empCount + ", globalPresence=" + globalPresence + ", boardMember="
+				+ boardMember + ", projectManager=" + projectManager + "]";
 	}
+	
+	
 	
 	
 	

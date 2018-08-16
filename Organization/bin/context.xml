@@ -36,7 +36,7 @@
 	<entry key=".net" value="Tony"></entry>
 	</util:map>
 	
-	<bean id="orga" class="com.orga.provider.Organization" p:address-ref="address">
+	<bean id="orga" class="com.orga.provider.Organization" p:address-ref="address" lazy-init="false">
 	<constructor-arg type="String" index="0" value="Capgemini"/>
 	<constructor-arg type="com.orga.provider.Address" index="1" name="address" ref="address"/>
 	<constructor-arg type="double" index="2" value="10000"/>
